@@ -15,8 +15,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "peaq11 - structured reboot",
-  description: "Legacy peaq.ch rebuilt with Next.js + Sanity-ready content layer.",
+  title: "peaq11 - Structured Relaunch",
+  description: "Modernized peaq.ch relaunch with complete legacy content, media, and route coverage.",
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -25,7 +25,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${sora.variable} ${spaceGrotesk.variable}`}>
-        <Navigation menu={content.menu} pages={content.pages} />
+        <Navigation menuItems={content.menuItems} />
         {children}
       </body>
     </html>
