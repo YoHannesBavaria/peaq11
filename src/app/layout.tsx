@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, Space_Grotesk } from "next/font/google";
 import { Navigation } from "@/components/navigation";
+import { SiteFooter } from "@/components/site-footer";
 import { getSiteContent } from "@/lib/content";
 import "./globals.css";
 
@@ -27,6 +28,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       <body className={`${sora.variable} ${spaceGrotesk.variable}`}>
         <Navigation menuItems={content.menuItems} />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
